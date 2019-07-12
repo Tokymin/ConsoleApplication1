@@ -54,21 +54,26 @@ void loopLeftTran(int R[],int n,int p) {
 	}
 }
 
-//int location(int L[],int length) {
-//	//将一个顺序表中的元素，小于0的放前面
-//	int i = 0, j = 0;
-//	int left = 0, right = length;
-//	while (left<right)
-//	{
-//		for (int i = 0; i < length/2;i++) {
-//		
-//		if (L[left]>0) {
-//			/*L[i]=*/
-//		}
-//
-//		}
-//		
-//	}
+void location(Sqlist &L) {
+	//将一个顺序表中的元素，小于0的放前面,大于放后半部分
+	//算法：分别从头和尾遍历列表，找到大于0的和小于0的，交换位置。终止条件为i<j
+	int i = 0, j = L.length-1;
+	int temp;
+	while (i<j)
+	{
+		while (i<j&&L.data[i]<0) {
+			i++;//用i指针循环
+		}
+		while (i<j&&L.data[j]>=0) {
+			j--;//用j指针循环
+		}
+		if (i<j) {
+			temp = L.data[i];
+			L.data[i] = L.data[j];
+			L.data[j] = temp;
+		}
+	}
+}
 //	
 //}
 
@@ -81,29 +86,68 @@ void loopLeftTran(int R[],int n,int p) {
 //	}
 //}
 
-int main2()
+void delSame(Sqlist &L) {
+	int i, j = 0, k;
+	for (i = 1; i < L.length;i++) {
+		k = 0;
+		while (k <= j&&L.data[k]!=L.data[i]) {
+			k++;//用j记录，或者说去寻找
+		}
+		if (k>j) {//表示L.data[i]与L.data[0..j]中的都不同
+			j++;
+			L.data[j] = L.data[i];//为什么要赋值？
+
+		}
+	}
+	L.length = j + 1;
+
+}
+
+//求交集
+void Intersection(Sqlist A,Sqlist B,Sqlist &C) {
+	int i, j, k = 0;
+	for (i = 0; i < A.length;i++) {
+		j = 0;
+		while (j < B.length&&B.data[j]!=A.data[i]) {
+			j++;
+		}
+		if (j<B.length) {
+			C.data[k++] = A.data[i];
+		}
+		C.length = k;
+	}
+}
+
+int main()
 {
-	//Sqlist L;
-	//L.length = 11;
-	//for (int i = 0; i < L.length; i++) {
-	//	L.data[i] = i * 2;
-	//	//int a = rand() % 10;    //产生0~9的随机数，注意10会被整除
-	//	//int a = rand() % 51 + 13;    //产生13~63的随机数
-	//}
-	//
+	Sqlist L;
+	L.length =10;
+	for (int i = 0; i < L.length; i++) {
+		/*L.data[i] = i + 2;*/
+		//int a = rand() % 10;    //产生0~9的随机数，注意10会被整除
+		//int a = rand() % 51 + 13;    //产生13~63的随机数
+		L.data[i] = rand() % 3 +5;
+	}
+	
 
-	//Sqlist L1;
-	//L1.length = 11;
-	//for (int i = 0; i < L1.length; i++) {
-	//	L1.data[i] = i * 3;
-	//}
+	Sqlist L1;
+	L1.length = 11;
+	for (int i = 0; i < L1.length; i++) {
+		L1.data[i] = i * 3;
+	}
+	Sqlist L2;
+	
+	printf("初始：");
+	for (int i = 0; i < L.length; i++) {
+		printf("%d,", L.data[i]);
+		
+	}
+	printf("\n");
+	printf("初始：");
+	for (int i = 0; i < L1.length; i++) {
+		printf("%d,", L1.data[i]);
 
-	//printf("初始：");
-	//for (int i = 0; i < L.length; i++) {
-	//	printf("%d,", L.data[i]);
-	//	
-	//}
-
+	}
 	////for (int i = 0; i < L.length; i++) {
 	////	printf("%d,", L1.data[i]);
 
@@ -115,18 +159,20 @@ int main2()
 	//for (int i = 0; i <= L3.length; i++) {
 	//	L3.data[i] = 0;
 	//}*/
-	//reverse(L);
+	//reverse(L)//逆置;
 	//printf("之后\n");
 	//for (int i = 0; i < L.length; i++) {
 	//	printf("%d,", L.data[i]);
 	//}
 	//printf("%d,", L.length);
-	int a[5] = { 1, 2, 3, 4, 5 };
+	/*int a[5] = { 1, 2, 3, 4, 5 };*/
 	/*int b[5] = { 1, 2, 3, 4, 5 };*/
-	/*loopLeftTran(a,5,3);*/
-	
-	for (int i = 0; i < 5; i++) {
-		printf("%d,",a[i]);
+	/*loopLeftTran(a,5,3);//循环左移*/
+	//location(L);//小于0 的放前，大于的放后
+	//delSame(L)删除表中相同的元素;
+	Intersection(L,L1,L2);
+	for (int i = 0; i < L2.length; i++) {
+		printf("%d,",L2.data[i]);
 	}
 	return 0;
 }

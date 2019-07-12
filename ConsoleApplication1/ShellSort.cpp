@@ -22,6 +22,7 @@ void shellSort(Sqlist L, int len) {
 			while (j>=0&&temp<L.data[j]) {
 				L.data[j + d] = L.data[j];
 				j = j - d;
+				//
 			}
 			L.data[j + d] = temp;
 		}
@@ -30,7 +31,7 @@ void shellSort(Sqlist L, int len) {
 
 }
 
-int main()
+int mainShellSort()
 {
 
 	Sqlist L;

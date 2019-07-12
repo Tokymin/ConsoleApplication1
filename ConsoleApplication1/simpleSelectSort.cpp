@@ -2,7 +2,7 @@
 #include "stdafx.h"
 #include "math.h"
 #include <stdlib.h>
-int main1()
+int mainsimpleSelectSort()
 {
 	int a[10], i, j, k, t;
 	printf("input10numbers:\n");
