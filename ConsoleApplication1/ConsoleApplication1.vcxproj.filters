@@ -13,6 +13,30 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="源文件\线性表">
+      <UniqueIdentifier>{f97af108-f131-41ab-8f1e-02c2a7adbb0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\排序">
+      <UniqueIdentifier>{1ce763d3-8993-46b7-9ab6-eeedadb9f87d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\查找">
+      <UniqueIdentifier>{1965f687-ed71-47d4-a3b8-b5a7dd5ee194}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\链表操作">
+      <UniqueIdentifier>{9876c4eb-6fe7-4341-a919-34afae04b655}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\栈">
+      <UniqueIdentifier>{d020cf08-24fd-4d46-8aac-2c1bba19cb81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\队列">
+      <UniqueIdentifier>{09194eff-4035-40a3-bfde-f9990760d45c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\树">
+      <UniqueIdentifier>{f112e95b-0b5a-4eb9-816a-73337fc841a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\图">
+      <UniqueIdentifier>{871adadc-6468-4f44-a149-b7fa1959ec0c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -29,20 +53,74 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="ConsoleApplication1.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="test1.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="simpleSelectSort.cpp">
-      <Filter>源文件</Filter>
+    <ClCompile Include="ConsoleApplication1.cpp">
+      <Filter>源文件\线性表</Filter>
+    </ClCompile>
+    <ClCompile Include="lineTable.cpp">
+      <Filter>源文件\线性表</Filter>
+    </ClCompile>
+    <ClCompile Include="work12.cpp">
+      <Filter>源文件\线性表</Filter>
     </ClCompile>
     <ClCompile Include="BubbleSort.cpp">
-      <Filter>源文件</Filter>
+      <Filter>源文件\排序</Filter>
     </ClCompile>
     <ClCompile Include="ShellSort.cpp">
-      <Filter>源文件</Filter>
+      <Filter>源文件\排序</Filter>
+    </ClCompile>
+    <ClCompile Include="simpleSelectSort.cpp">
+      <Filter>源文件\排序</Filter>
+    </ClCompile>
+    <ClCompile Include="Dividesearch.cpp">
+      <Filter>源文件\查找</Filter>
+    </ClCompile>
+    <ClCompile Include="单链表.cpp">
+      <Filter>源文件\链表操作</Filter>
+    </ClCompile>
+    <ClCompile Include="双链表.cpp">
+      <Filter>源文件\链表操作</Filter>
+    </ClCompile>
+    <ClCompile Include="循环链表.cpp">
+      <Filter>源文件\链表操作</Filter>
+    </ClCompile>
+    <ClCompile Include="顺序栈.cpp">
+      <Filter>源文件\栈</Filter>
+    </ClCompile>
+    <ClCompile Include="链式栈.cpp">
+      <Filter>源文件\栈</Filter>
+    </ClCompile>
+    <ClCompile Include="顺序队列.cpp">
+      <Filter>源文件\队列</Filter>
+    </ClCompile>
+    <ClCompile Include="循环队列.cpp">
+      <Filter>源文件\队列</Filter>
+    </ClCompile>
+    <ClCompile Include="链式队列.cpp">
+      <Filter>源文件\队列</Filter>
+    </ClCompile>
+    <ClCompile Include="增强型tag循环队列.cpp">
+      <Filter>源文件\队列</Filter>
+    </ClCompile>
+    <ClCompile Include="二叉树.cpp">
+      <Filter>源文件\树</Filter>
+    </ClCompile>
+    <ClCompile Include="树的遍历.cpp">
+      <Filter>源文件\树</Filter>
+    </ClCompile>
+    <ClCompile Include="线索二叉树.cpp">
+      <Filter>源文件\树</Filter>
+    </ClCompile>
+    <ClCompile Include="哈夫曼树.cpp">
+      <Filter>源文件\树</Filter>
+    </ClCompile>
+    <ClCompile Include="邻接矩阵存储.cpp">
+      <Filter>源文件\图</Filter>
+    </ClCompile>
+    <ClCompile Include="邻接表存储.cpp">
+      <Filter>源文件\图</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

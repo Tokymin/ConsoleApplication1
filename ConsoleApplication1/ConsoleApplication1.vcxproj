@@ -144,6 +144,8 @@
   <ItemGroup>
     <ClCompile Include="BubbleSort.cpp" />
     <ClCompile Include="ConsoleApplication1.cpp" />
+    <ClCompile Include="Dividesearch.cpp" />
+    <ClCompile Include="lineTable.cpp" />
     <ClCompile Include="ShellSort.cpp" />
     <ClCompile Include="simpleSelectSort.cpp" />
     <ClCompile Include="stdafx.cpp">
@@ -153,6 +155,22 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="test1.cpp" />
+    <ClCompile Include="work12.cpp" />
+    <ClCompile Include="二叉树.cpp" />
+    <ClCompile Include="单链表.cpp" />
+    <ClCompile Include="双链表.cpp" />
+    <ClCompile Include="哈夫曼树.cpp" />
+    <ClCompile Include="增强型tag循环队列.cpp" />
+    <ClCompile Include="循环链表.cpp" />
+    <ClCompile Include="循环队列.cpp" />
+    <ClCompile Include="树的遍历.cpp" />
+    <ClCompile Include="线索二叉树.cpp" />
+    <ClCompile Include="邻接矩阵存储.cpp" />
+    <ClCompile Include="邻接表存储.cpp" />
+    <ClCompile Include="链式栈.cpp" />
+    <ClCompile Include="链式队列.cpp" />
+    <ClCompile Include="顺序栈.cpp" />
+    <ClCompile Include="顺序队列.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

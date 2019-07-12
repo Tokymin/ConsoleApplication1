@@ -56,7 +56,7 @@ void loopLeftTran(int R[],int n,int p) {
 
 void location(Sqlist &L) {
 	//将一个顺序表中的元素，小于0的放前面,大于放后半部分
-	//算法：分别从头和尾遍历列表，找到大于0的和小于0的，交换位置。终止条件为i<j
+	//算法：分别从头和尾遍历列表，找到大于0的和小于   0的，交换位置。终止条件为i<j
 	int i = 0, j = L.length-1;
 	int temp;
 	while (i<j)
@@ -118,22 +118,59 @@ void Intersection(Sqlist A,Sqlist B,Sqlist &C) {
 	}
 }
 
-int main()
+//集合是有序表，求交集。利用有序表的归并运算
+void Interscetion1(Sqlist A, Sqlist B, Sqlist &C) {
+	int i = 0, j = 0, k = 0;
+	while (i<A.length&&j<B.length) {
+		if (A.data[i]==B.data[j]) {
+			C.data[k] = A.data[i];
+			i++;
+			j++;
+			k++;
+		}
+		else if(A.data[i] < B.data[j]){
+			i++;
+		}
+		else {
+			j++;
+		}
+		C.length = k;
+	}
+}
+
+void Unio(Sqlist A, Sqlist B, Sqlist &C) {
+	int i, j, k;
+	for (i= 0; i < A.length; i++) {
+		C.data[i] = A.data[i];
+	}
+	k=A.length;
+	for (j = 0; j < B.length; j++) {
+		j = 0;
+		while (j < B.length) {
+			if (B.data[j] != C.data[j])
+				C.data[k++] = A.data[i];
+			j++;
+		}
+	}
+	 C.length=k;
+}
+
+int mainConse()
 {
 	Sqlist L;
 	L.length =10;
 	for (int i = 0; i < L.length; i++) {
-		/*L.data[i] = i + 2;*/
+		L.data[i] = i + 2;
 		//int a = rand() % 10;    //产生0~9的随机数，注意10会被整除
 		//int a = rand() % 51 + 13;    //产生13~63的随机数
-		L.data[i] = rand() % 3 +5;
+		//L.data[i] = rand() % 3 +5;
 	}
 	
 
 	Sqlist L1;
 	L1.length = 11;
 	for (int i = 0; i < L1.length; i++) {
-		L1.data[i] = i * 3;
+		L1.data[i] = i +4;
 	}
 	Sqlist L2;
 	
@@ -170,7 +207,10 @@ int main()
 	/*loopLeftTran(a,5,3);//循环左移*/
 	//location(L);//小于0 的放前，大于的放后
 	//delSame(L)删除表中相同的元素;
-	Intersection(L,L1,L2);
+	//Intersection(L,L1,L2);	delSame(L2);//求交集之后删除得到的交集集合中相同的元素
+	Interscetion1(L, L1, L2);
+
+	printf("\n");
 	for (int i = 0; i < L2.length; i++) {
 		printf("%d,",L2.data[i]);
 	}
