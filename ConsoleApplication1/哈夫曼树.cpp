@@ -48,7 +48,8 @@ void CreatHT(HTNode ht[],int n0) {
 	}
 }
 
-int main() {
+int maintest() {
 	HTNode ht[4];
 	CreatHT(ht,4);
+	return 0;
 }

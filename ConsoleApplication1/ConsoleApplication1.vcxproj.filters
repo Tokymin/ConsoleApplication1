@@ -37,6 +37,9 @@
     <Filter Include="源文件\图">
       <UniqueIdentifier>{871adadc-6468-4f44-a149-b7fa1959ec0c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\刷题">
+      <UniqueIdentifier>{fae0e438-7774-4d81-96e9-684ac5b02f21}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -121,6 +124,15 @@
     </ClCompile>
     <ClCompile Include="邻接表存储.cpp">
       <Filter>源文件\图</Filter>
+    </ClCompile>
+    <ClCompile Include="2019-9-14.cpp">
+      <Filter>源文件\刷题</Filter>
+    </ClCompile>
+    <ClCompile Include="2019-9-15.cpp">
+      <Filter>源文件\刷题</Filter>
+    </ClCompile>
+    <ClCompile Include="2019-9-15回文素数.cpp">
+      <Filter>源文件\刷题</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

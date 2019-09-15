@@ -142,6 +142,8 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="2019-9-14.cpp" />
+    <ClCompile Include="2019-9-15.cpp" />
     <ClCompile Include="BubbleSort.cpp" />
     <ClCompile Include="ConsoleApplication1.cpp" />
     <ClCompile Include="Dividesearch.cpp" />
@@ -154,6 +156,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="2019-9-15回文素数.cpp" />
     <ClCompile Include="test1.cpp" />
     <ClCompile Include="work12.cpp" />
     <ClCompile Include="二叉树.cpp" />
